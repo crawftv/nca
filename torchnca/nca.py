@@ -221,8 +221,6 @@ class NCA:
         optimizer.step()
 
         i_global += 1
-        if not i_global % 25:
-          print("epoch: {} - loss: {:.5f}".format(epoch+1, loss.item()))
 
       # check if within convergence
       A_curr = optimizer.param_groups[0]['params'][0]
